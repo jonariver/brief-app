@@ -50,9 +50,10 @@ a.src{color:var(--ink-soft);}
 .week{padding:8px 0 64px;}
 .wday{display:flex;border-top:1px solid var(--hairline);padding:18px 0;}
 .wday:first-child{border-top:none;}
-.wday .d{width:120px;flex-shrink:0;}
+.wday .d{width:158px;flex-shrink:0;padding-right:12px;}
 .wday .d b{display:block;color:var(--ink);font-size:14px;}
 .wday .d span{font-size:13px;color:var(--ink-grey);font-variant-numeric:tabular-nums;}
+.wday .d .wx{display:block;margin-top:4px;font-size:13px;color:var(--ink-grey);white-space:nowrap;}
 .wday ul{list-style:none;flex:1;}
 .wday ul li{font-size:14.5px;padding-bottom:4px;}
 .wday ul li b{color:var(--ink);font-weight:600;}
@@ -135,11 +136,11 @@ a.src{color:var(--ink-soft);}
       <div class="acts">
         <div class="act">
           <b>MO – MI</b>
-          <p>Montag und Mittwoch sind frei — nur der Dienstag hat Gewicht: Therapie am Morgen, die Intelligenztestung am Nachmittag.</p>
+          <p>Montag und Mittwoch sind frei — nur der Dienstag hat Gewicht: Therapie am Morgen, die Intelligenztestung am Nachmittag. Der Montag wird mit 34 Grad der heißeste Tag der Woche.</p>
         </div>
         <div class="act">
           <b>DO</b>
-          <p>Der dichteste Tag: Wiegen, um 10:30 die Narbenkontrolle beim Hautarzt — und Nici hat frei.</p>
+          <p>Der dichteste Tag: Wiegen, um 10:30 die Narbenkontrolle beim Hautarzt — und Nici hat frei. Bei 30 Grad lohnt sich der frühe Weg.</p>
         </div>
         <div class="act">
           <b>FR – SO</b>
@@ -187,49 +188,49 @@ a.src{color:var(--ink-soft);}
     <div class="pane" id="bottom-woche">
       <div class="week">
         <div class="wday quiet">
-          <div class="d"><b>Montag</b><span>10. August</span></div>
+          <div class="d"><b>Montag</b><span>10. August</span><span class="wx">Teils sonnig &#183; 34&#176;&#8202;/&#8202;20&#176;</span></div>
           <ul><li>Frei</li></ul>
         </div>
         <div class="wday">
-          <div class="d"><b>Dienstag</b><span>11. August</span></div>
+          <div class="d"><b>Dienstag</b><span>11. August</span><span class="wx">Teils sonnig &#183; 31&#176;&#8202;/&#8202;20&#176;</span></div>
           <ul>
-            <li><span class="tm">8:50 – 9:50</span><b>Therapie</b></li>
-            <li><span class="tm">14 – 16 Uhr</span><b>Intelligenztestung</b></li>
+            <li><span class="tm">8:50 &#8211; 9:50</span><b>Therapie</b></li>
+            <li><span class="tm">14 &#8211; 16 Uhr</span><b>Intelligenztestung</b></li>
           </ul>
         </div>
         <div class="wday quiet">
-          <div class="d"><b>Mittwoch</b><span>12. August</span></div>
+          <div class="d"><b>Mittwoch</b><span>12. August</span><span class="wx">Sonnig &#183; 30&#176;&#8202;/&#8202;18&#176;</span></div>
           <ul><li>Frei</li></ul>
         </div>
         <div class="wday">
-          <div class="d"><b>Donnerstag</b><span>13. August</span></div>
+          <div class="d"><b>Donnerstag</b><span>13. August</span><span class="wx">Sonnig &#183; 30&#176;&#8202;/&#8202;18&#176;</span></div>
           <ul>
-            <li><b>Wiegen</b> — morgens</li>
-            <li><span class="tm">10:30 – 11:30</span><b>Kontrolle Narbe, Hautarzt</b> — Züricher Str. 27</li>
-            <li><b>Geschirrspülerpulver kommt</b></li>
-            <li><b>Nici hat frei</b> — bis Dienstag früh</li>
+            <li><b>Wiegen</b> &#8212; morgens</li>
+            <li><span class="tm">10:30 &#8211; 11:30</span><b>Kontrolle Narbe, Hautarzt</b> &#8212; Z&#252;richer Str. 27</li>
+            <li><b>Geschirrsp&#252;lerpulver kommt</b></li>
+            <li><b>Nici hat frei</b> &#8212; bis Dienstag fr&#252;h</li>
           </ul>
         </div>
         <div class="wday">
-          <div class="d"><b>Freitag</b><span>14. August</span></div>
-          <ul><li><span class="tm">ab 15 Uhr</span><b>Nici Area 47</b> — bis Sonntag 16 Uhr</li></ul>
+          <div class="d"><b>Freitag</b><span>14. August</span><span class="wx">Sonnig &#183; 33&#176;&#8202;/&#8202;20&#176;</span></div>
+          <ul><li><span class="tm">ab 15 Uhr</span><b>Nici Area 47</b> &#8212; bis Sonntag 16 Uhr</li></ul>
         </div>
         <div class="wday quiet">
-          <div class="d"><b>Samstag</b><span>15. August</span></div>
+          <div class="d"><b>Samstag</b><span>15. August</span><span class="wx">Sonnig &#183; 33&#176;&#8202;/&#8202;22&#176;</span></div>
           <ul><li>Frei</li></ul>
         </div>
         <div class="wday">
-          <div class="d"><b>Sonntag</b><span>16. August</span></div>
+          <div class="d"><b>Sonntag</b><span>16. August</span><span class="wx">Teils sonnig &#183; 29&#176;&#8202;/&#8202;17&#176;</span></div>
           <ul>
-            <li><span class="tm">9 – 9:30</span><b>Blutdruckmessung</b></li>
+            <li><span class="tm">9 &#8211; 9:30</span><b>Blutdruckmessung</b></li>
           </ul>
         </div>
       </div>
-      <p class="weeknote">Die Krankschreibung läuft noch bis einschließlich Montag, den 17. August. Wettertrend: Die Hitzewelle verstärkt sich — ab Dienstag überwiegend sonnig und trocken, in der zweiten Wochenhälfte oft über 35 Grad.</p>
+      <p class="weeknote">Die Krankschreibung l&#228;uft noch bis einschlie&#223;lich Montag, den 17. August. Die Woche bleibt durchgehend sonnig und trocken, mit 29 bis 34 Grad am Tag und lauen N&#228;chten um 20 Grad &#8212; am hei&#223;esten wird es am Montag.</p>
     </div>
     <!-- /SECTION:woche-bottom -->
 
-    <p class="updated" id="updated">Stand: Samstag, 8. August 2026, mittags</p>
+    <p class="updated" id="updated">Stand: Samstag, 8. August 2026, mittags &#183; Wetter erg&#228;nzt</p>
   </div>
 </div>
 

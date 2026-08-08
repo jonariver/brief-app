@@ -1,1 +1,247 @@
-__WIRD_ERSETZT__
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Brief</title>
+<style>
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:600;src:url(https://cdn.jsdelivr.net/npm/@fontsource/fraunces/files/fraunces-latin-600-normal.woff2) format('woff2');}
+:root{
+  --bg:#FCFCFB; --wash:#F9F9F7; --ink:#2E2C27; --ink-soft:#6B6A63;
+  --ink-grey:#B4B3A8; --hairline:#E4E3DC; --band-line:#E1E1DF; --clay:#C6613F;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--ink-soft);font-family:-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.6;}
+.band-top{background:var(--wash);border-bottom:1px solid var(--band-line);}
+.band-bottom{background:var(--bg);}
+.inner{max-width:860px;margin:0 auto;padding:0 32px;}
+
+/* Tabs */
+nav.tabs{padding-top:34px;display:flex;gap:28px;}
+nav.tabs a{font-family:-apple-system,"Segoe UI",sans-serif;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-grey);text-decoration:none;padding-bottom:6px;border-bottom:2px solid transparent;cursor:pointer;}
+nav.tabs a.active{color:var(--ink);border-bottom-color:var(--ink);}
+.pane{display:none;}
+.pane.active{display:block;}
+
+/* Anchor */
+.daydate{padding-top:40px;font-size:13px;letter-spacing:.08em;color:var(--ink-soft);text-transform:none;}
+h1.headline{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:40px;line-height:1.2;color:var(--ink);margin-top:10px;max-width:760px;}
+.terrain{margin-top:26px;width:100%;height:auto;display:block;}
+.acts{display:flex;margin:8px 0 46px;}
+.act{flex:1;padding:0 22px 0 0;}
+.act + .act{border-left:1px solid var(--hairline);padding-left:22px;}
+.act b{display:block;color:var(--ink);font-size:14px;letter-spacing:.02em;margin-bottom:6px;}
+.act p{font-size:14.5px;color:var(--ink-soft);}
+
+/* Lists */
+section.list{padding-top:46px;}
+section.list:last-of-type{padding-bottom:64px;}
+section.list h2{font-family:-apple-system,"Segoe UI",sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin-bottom:18px;}
+ol.items{list-style:none;counter-reset:it;}
+ol.items li{counter-increment:it;position:relative;padding:0 0 20px 44px;}
+ol.items li::before{content:counter(it,decimal-leading-zero);position:absolute;left:0;top:2px;font-size:13px;color:var(--ink-grey);font-variant-numeric:tabular-nums;}
+ol.items .t{display:block;font-weight:600;color:var(--ink);font-size:16px;}
+ol.items p{font-size:14.5px;}
+ol.items p u, .src{color:var(--ink-soft);text-decoration:underline;text-decoration-color:var(--ink-grey);text-underline-offset:2px;font-style:normal;}
+a.src{color:var(--ink-soft);}
+
+/* Week */
+.week{padding:8px 0 64px;}
+.wday{display:flex;border-top:1px solid var(--hairline);padding:18px 0;}
+.wday:first-child{border-top:none;}
+.wday .d{width:120px;flex-shrink:0;}
+.wday .d b{display:block;color:var(--ink);font-size:14px;}
+.wday .d span{font-size:13px;color:var(--ink-grey);font-variant-numeric:tabular-nums;}
+.wday ul{list-style:none;flex:1;}
+.wday ul li{font-size:14.5px;padding-bottom:4px;}
+.wday ul li b{color:var(--ink);font-weight:600;}
+.wday ul li .tm{color:var(--ink-grey);font-variant-numeric:tabular-nums;margin-right:8px;font-size:13.5px;}
+.wday.quiet ul li{color:var(--ink-grey);}
+.weeknote{padding:34px 0 8px;max-width:640px;font-size:14.5px;}
+.updated{padding:0 0 40px;font-size:12px;color:var(--ink-grey);}
+
+@media (max-width:640px){
+  h1.headline{font-size:30px;}
+  .acts{flex-direction:column;}
+  .act + .act{border-left:none;border-top:1px solid var(--hairline);padding:14px 0 0;margin-top:14px;}
+  .act{padding-right:0;}
+  .wday{flex-direction:column;}
+  .wday .d{width:auto;margin-bottom:6px;}
+  .inner{padding:0 20px;}
+}
+</style>
+</head>
+<body>
+
+<div class="band-top">
+  <div class="inner">
+    <nav class="tabs">
+      <a id="tab-brief" class="active" onclick="show('brief')">Tages-Brief</a>
+      <a id="tab-woche" onclick="show('woche')">Wochenausblick</a>
+    </nav>
+
+    <!-- ===== TOP: TAGES-BRIEF ===== -->
+    <!-- SECTION:brief-top -->
+    <div class="pane active" id="top-brief">
+      <p class="daydate">Samstag · 8. August 2026</p>
+      <h1 class="headline">Der ganze Tag gehört dir, Jonathan — und draußen beginnt der Hochsommer.</h1>
+      <svg class="terrain" viewBox="0 0 840 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ein ruhiger, offener Tag">
+        <path d="M0 122 C 140 120, 300 123, 420 121 S 700 120, 840 122" fill="none" stroke="#2E2C27" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="140" cy="52" r="16" fill="none" stroke="#C6613F" stroke-width="2"/>
+        <g stroke="#C6613F" stroke-width="2" stroke-linecap="round">
+          <line x1="140" y1="24" x2="140" y2="16"/><line x1="140" y1="88" x2="140" y2="80"/>
+          <line x1="112" y1="52" x2="104" y2="52"/><line x1="176" y1="52" x2="168" y2="52"/>
+          <line x1="120" y1="32" x2="114" y2="26"/><line x1="166" y1="78" x2="160" y2="72"/>
+          <line x1="160" y1="32" x2="166" y2="26"/><line x1="114" y1="78" x2="120" y2="72"/>
+        </g>
+        <path d="M600 58 q6 -7 12 0 M612 58 q6 -7 12 0" fill="none" stroke="#2E2C27" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M652 44 q5 -6 10 0 M662 44 q5 -6 10 0" fill="none" stroke="#2E2C27" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <div class="acts">
+        <div class="act">
+          <b>MORGEN</b>
+          <p>Noch angenehm kühl — die beste Zeit des Tages, um draußen zu sein, bevor die Hitze kommt.</p>
+        </div>
+        <div class="act">
+          <b>MITTAG – NACHMITTAG</b>
+          <p>Sonnig und heiß, um die 30 Grad und mehr — ein Tag für Schatten, Wasser und wenig Eile.</p>
+        </div>
+        <div class="act">
+          <b>ABEND</b>
+          <p>Morgen früh um 9 steht die Blutdruckmessung, um 10 die Kaffeerunde auf Skool — der Abend darf ruhig ausklingen.</p>
+        </div>
+      </div>
+    </div>
+    <!-- /SECTION:brief-top -->
+
+    <!-- ===== TOP: WOCHENAUSBLICK ===== -->
+    <!-- SECTION:woche-top -->
+    <div class="pane" id="top-woche">
+      <p class="daydate">Woche vom 10. bis 16. August 2026</p>
+      <h1 class="headline">Eine offene Woche, Jonathan — nur der Donnerstag sammelt Termine.</h1>
+      <svg class="terrain" viewBox="0 0 840 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Die Woche als Landschaft">
+        <path d="M0 124 C 70 123, 150 123, 210 118 C 240 102, 255 96, 270 96 C 300 98, 330 116, 380 121 C 420 124, 450 114, 480 102 C 500 82, 515 76, 530 76 C 560 76, 590 100, 630 112 C 680 124, 760 122, 840 120" fill="none" stroke="#2E2C27" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="252" cy="98" r="7" fill="#2E2C27"/>
+        <circle cx="285" cy="97" r="9" fill="#2E2C27"/>
+        <circle cx="527" cy="77" r="9" fill="#2E2C27"/>
+        <circle cx="560" cy="80" r="6" fill="#B4B3A8"/>
+        <circle cx="700" cy="121" r="6" fill="#B4B3A8"/>
+        <g stroke="#C6613F" stroke-width="2" stroke-linecap="round" fill="none">
+          <line x1="527" y1="66" x2="527" y2="42"/>
+          <path d="M527 42 l 20 6 l -20 6"/>
+        </g>
+      </svg>
+      <div class="acts">
+        <div class="act">
+          <b>MO – MI</b>
+          <p>Montag und Mittwoch sind frei — nur der Dienstag hat Gewicht: Therapie am Morgen, die Intelligenztestung am Nachmittag.</p>
+        </div>
+        <div class="act">
+          <b>DO</b>
+          <p>Der dichteste Tag: Wiegen, um 10:30 die Narbenkontrolle beim Hautarzt — und Nici hat frei.</p>
+        </div>
+        <div class="act">
+          <b>FR – SO</b>
+          <p>Nici ist ab Freitagnachmittag in der Area 47; Sonntag bleibt nur die Blutdruckmessung um 9.</p>
+        </div>
+      </div>
+    </div>
+    <!-- /SECTION:woche-top -->
+  </div>
+</div>
+
+<div class="band-bottom">
+  <div class="inner">
+
+    <!-- ===== BOTTOM: TAGES-BRIEF ===== -->
+    <!-- SECTION:brief-bottom -->
+    <div class="pane active" id="bottom-brief">
+      <section class="list">
+        <h2>Braucht dich</h2>
+        <ol class="items">
+          <li>
+            <span class="t">Dein XING-Passwort wurde heute früh geändert</span>
+            <p><span class="src">In deinem Postfach</span> liegen zwei Mails von XING, 5:41 und 5:42 Uhr: erst ein Code zum Zurücksetzen, dann die Bestätigung „Dein XING Passwort wurde geändert&#8220;. Warst du das nicht selbst, ist das heute einen Blick wert.</p>
+          </li>
+          <li>
+            <span class="t">Nici lädt dich zur Bring!-Liste ein</span>
+            <p><span class="src">Per Mail von gestern Abend</span> — eine Einladung zur gemeinsamen Einkaufsliste „Airfryer Rezept Ideen&#8220;, die auf deine Annahme wartet.</p>
+          </li>
+        </ol>
+      </section>
+      <section class="list">
+        <h2>Erledigt</h2>
+        <ol class="items">
+          <li>
+            <span class="t">Google hat deine Claude-Anmeldung bestätigt</span>
+            <p><span class="src">In deinem Postfach</span>: die übliche Bestätigung, dass du dich gestern um 15:33 mit Google bei Claude angemeldet hast — alles wie erwartet.</p>
+          </li>
+        </ol>
+      </section>
+    </div>
+    <!-- /SECTION:brief-bottom -->
+
+    <!-- ===== BOTTOM: WOCHENAUSBLICK ===== -->
+    <!-- SECTION:woche-bottom -->
+    <div class="pane" id="bottom-woche">
+      <div class="week">
+        <div class="wday quiet">
+          <div class="d"><b>Montag</b><span>10. August</span></div>
+          <ul><li>Frei</li></ul>
+        </div>
+        <div class="wday">
+          <div class="d"><b>Dienstag</b><span>11. August</span></div>
+          <ul>
+            <li><span class="tm">8:50 – 9:50</span><b>Therapie</b></li>
+            <li><span class="tm">14 – 16 Uhr</span><b>Intelligenztestung</b></li>
+          </ul>
+        </div>
+        <div class="wday quiet">
+          <div class="d"><b>Mittwoch</b><span>12. August</span></div>
+          <ul><li>Frei</li></ul>
+        </div>
+        <div class="wday">
+          <div class="d"><b>Donnerstag</b><span>13. August</span></div>
+          <ul>
+            <li><b>Wiegen</b> — morgens</li>
+            <li><span class="tm">10:30 – 11:30</span><b>Kontrolle Narbe, Hautarzt</b> — Züricher Str. 27</li>
+            <li><b>Geschirrspülerpulver kommt</b></li>
+            <li><b>Nici hat frei</b> — bis Dienstag früh</li>
+          </ul>
+        </div>
+        <div class="wday">
+          <div class="d"><b>Freitag</b><span>14. August</span></div>
+          <ul><li><span class="tm">ab 15 Uhr</span><b>Nici Area 47</b> — bis Sonntag 16 Uhr</li></ul>
+        </div>
+        <div class="wday quiet">
+          <div class="d"><b>Samstag</b><span>15. August</span></div>
+          <ul><li>Frei</li></ul>
+        </div>
+        <div class="wday">
+          <div class="d"><b>Sonntag</b><span>16. August</span></div>
+          <ul>
+            <li><span class="tm">9 – 9:30</span><b>Blutdruckmessung</b></li>
+          </ul>
+        </div>
+      </div>
+      <p class="weeknote">Die Krankschreibung läuft noch bis einschließlich Montag, den 17. August. Wettertrend: Die Hitzewelle verstärkt sich — ab Dienstag überwiegend sonnig und trocken, in der zweiten Wochenhälfte oft über 35 Grad.</p>
+    </div>
+    <!-- /SECTION:woche-bottom -->
+
+    <p class="updated" id="updated">Stand: Samstag, 8. August 2026, mittags</p>
+  </div>
+</div>
+
+<script>
+function show(which){
+  var panes={brief:['top-brief','bottom-brief'],woche:['top-woche','bottom-woche']};
+  ['brief','woche'].forEach(function(k){
+    var on=(k===which);
+    document.getElementById('tab-'+k).classList.toggle('active',on);
+    panes[k].forEach(function(id){document.getElementById(id).classList.toggle('active',on);});
+  });
+}
+</script>
+</body>
+</html>
